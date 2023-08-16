@@ -7,18 +7,6 @@
     android:background="@color/gray"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recycrerView"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/ic_input_add" />
-
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="412dp"
@@ -72,5 +60,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/addNote"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.957"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycrerView"
+        app:layout_constraintVertical_bias="0.36"
+        app:srcCompat="@drawable/add_note" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray_card">
+    android:background="@color/gray_card"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="5dp">
 
     <EditText
         android:id="@+id/noteText"
@@ -14,6 +16,7 @@
         android:background="@drawable/edit_text_no_underline"
         android:ems="10"
         android:gravity="top|start"
+        android:hint="Your note here"
         android:inputType="textMultiLine"
         android:lineSpacingExtra="5dp"
         android:minLines="1"
@@ -23,19 +26,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
         app:layout_constraintVertical_bias="0.009"
         tools:ignore="LabelFor" />
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="193dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="376dp"
-        android:text="TextView"
+        android:background="@drawable/edit_text_no_underline"
+        android:hint="Title"
         android:textColor="@color/bright_brown"
+        android:gravity="start|top"
+        android:layoutDirection="ltr"
+        android:inputType="text"
+        android:maxLines="1"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,15 +53,53 @@
         app:layout_constraintVertical_bias="0.164" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/backTab"
         android:layout_width="29dp"
         android:layout_height="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/titleText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.551"
         app:srcCompat="@drawable/arrow_back" />
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/titleText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toEndOf="@+id/backTab"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517"
+        app:srcCompat="@drawable/delete" />
+
+    <TextView
+        android:id="@+id/modifiedText"
+        android:layout_width="150dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/bright_brown"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/createdText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/createdText"
+        android:layout_width="150dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/bright_brown"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
